@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="COP17: Earth Observation for Biodiversity — Speakers, Contacts and Sources">
+<meta property="og:description" content="Every study, report, dataset, image and website behind the GeoCosmos talk at COP17, Yerevan, grouped by slide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rimaavetisyan.github.io/cop17/">
+<meta name="description" content="Speakers, contacts and all sources behind the COP17 talk Earth Observation for Biodiversity Conservation and Ecosystem Monitoring (GeoCosmos CJSC).">
+<title>COP17 Talk Sources</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Mono:wght@500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: a field logbook of sources, indexed by slide number down the left edge; one reading column, sticky slide index. */
+:root {
+  --bg: #F3F6F8; --surface: #FFFFFF; --ink: #0B1F33; --muted: #4F6378; --line: #D5DFE7;
+  --navy: #0C457C; --green: #17775A; --green-tint: #E3F3EC; --coral: #B4472F; --coral-tint: #FBE9E4;
+  --navy-tint: #E4EDF6; --band: #0C2F52; --band-ink: #F2F6FA; --band-muted: #A9C0D6; --band-accent: #6FD3AE;
+  --f-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --s-1: .8125rem; --s0: 1.0625rem; --s1: 1.25rem; --s2: 1.6rem; --s3: clamp(1.9rem, 1.2rem + 3.2vw, 3rem);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #08141F; --surface: #0E1D2B; --ink: #E3EBF2; --muted: #93A7BA; --line: #1D3346;
+  --navy: #8FBDEB; --green: #62CDA7; --green-tint: #10342A; --coral: #F2957F; --coral-tint: #3A1F1A;
+  --navy-tint: #132C45; --band: #0B2540; --band-ink: #EEF4F9; --band-muted: #9DB5CC; --band-accent: #6FD3AE;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #08141F; --surface: #0E1D2B; --ink: #E3EBF2; --muted: #93A7BA; --line: #1D3346;
+  --navy: #8FBDEB; --green: #62CDA7; --green-tint: #10342A; --coral: #F2957F; --coral-tint: #3A1F1A;
+  --navy-tint: #132C45; --band: #0B2540; --band-ink: #EEF4F9; --band-muted: #9DB5CC; --band-accent: #6FD3AE;
+  color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 4.25rem); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font: 400 var(--s0)/1.55 var(--f-body); -webkit-text-size-adjust: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--navy); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 4px; }
+
+/* Header */
+.top { padding-block: 2.5rem 1.75rem; }
+.eyebrow { font: 500 var(--s-1)/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--green); margin: 0 0 1rem; display: flex; flex-wrap: wrap; gap: .25rem .75rem; }
+.eyebrow span + span::before { content: "/"; margin-right: .75rem; color: var(--muted); }
+h1 { font: 750 var(--s3)/1.06 var(--f-display); font-stretch: 85%; letter-spacing: -.01em; margin: 0 0 1rem; text-wrap: balance; }
+.lede { font-size: var(--s1); line-height: 1.45; color: var(--muted); margin: 0 0 1.5rem; max-width: 38rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 0; padding: 1rem 0 0; border-top: 1px solid var(--line); font-size: .95rem; }
+.meta div { display: flex; flex-direction: column; min-width: 0; }
+.meta dt { font: 500 .72rem/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.meta dd { margin: 0; font-weight: 600; }
+
+/* Slide index */
+.index { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.index .wrap { display: flex; align-items: center; gap: .75rem; padding-block: .6rem; }
+.index-label { font: 500 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); flex: none; }
+.chips { display: flex; gap: .4rem; overflow-x: auto; scrollbar-width: none; min-width: 0; padding-block: .15rem; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; font: 500 .85rem/1 var(--f-mono); color: var(--ink); text-decoration: none; padding: .5rem .65rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--navy); }
+.chip[aria-current="true"] { background: var(--navy); border-color: var(--navy); color: var(--surface); }
+.chip-contact { font-family: var(--f-body); font-weight: 600; }
+
+/* Slides */
+main { padding-block: .5rem 3rem; }
+.cite-eyebrow { margin: 1.75rem 0 -.75rem; }
+.slide { padding-block: 2rem .5rem; border-bottom: 1px solid var(--line); }
+.slide:last-child { border-bottom: 0; }
+.slide-head { display: grid; grid-template-columns: 4.25rem 1fr; gap: 1rem; align-items: baseline; margin-bottom: 1rem; }
+.num { margin: 0; display: flex; flex-direction: column; font-family: var(--f-mono); }
+.num-label { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.num-val { font-size: 1.6rem; font-weight: 500; line-height: 1.1; color: var(--green); font-variant-numeric: tabular-nums; }
+h2 { font: 700 var(--s2)/1.15 var(--f-display); font-stretch: 88%; margin: 0; text-wrap: balance; min-width: 0; }
+.sources { list-style: none; margin: 0; padding: 0 0 0 5.25rem; display: grid; gap: .25rem; }
+.src { display: grid; grid-template-columns: 5.25rem 1fr; gap: .9rem; padding-block: .9rem; border-top: 1px dashed var(--line); margin-left: -5.25rem; }
+.src:first-child { border-top: 0; }
+.kind { align-self: start; justify-self: start; margin-top: .2rem; font: 500 .7rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: .35rem .45rem; border-radius: 4px; color: var(--muted); border: 1px solid var(--line); background: var(--surface); }
+.k-img { color: var(--coral); background: var(--coral-tint); border-color: transparent; }
+.k-study { color: var(--green); background: var(--green-tint); border-color: transparent; }
+.k-doc { color: var(--navy); background: var(--navy-tint); border-color: transparent; }
+.src-body { min-width: 0; }
+.src-title { font-weight: 600; font-size: 1.05rem; line-height: 1.35; text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.ext { font-size: .8em; margin-left: .25em; }
+.by { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; line-height: 1.4; }
+.use { margin: .35rem 0 0; font-size: .95rem; line-height: 1.45; }
+.use::before { content: "Used for: "; font-weight: 600; }
+
+/* Contact band (top of page, before the citations) */
+.contact { background: var(--band); color: var(--band-ink); }
+.contact .wrap { padding-block: 2.25rem 2.5rem; }
+.contact .eyebrow { color: var(--band-accent); }
+.contact h2 { font-size: var(--s2); margin-bottom: 1.25rem; }
+.contact h3 { font: 700 1.3rem/1.2 var(--f-display); font-stretch: 88%; margin: 0; }
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+.person { border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 1.1rem 1.1rem .4rem; min-width: 0; display: flex; flex-direction: column; }
+.person .order { font: 500 .7rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--band-accent); margin: 0 0 .6rem; }
+.role { margin: .4rem 0 .7rem; color: var(--band-muted); font-size: .95rem; line-height: 1.45; }
+.person .rows { margin-top: auto; }
+.company { margin-top: 2rem; }
+.tagline { margin: .35rem 0 1rem; color: var(--band-muted); font-size: 1rem; }
+.rows { display: grid; gap: 0; margin: 0; }
+.row { display: grid; grid-template-columns: 6rem 1fr auto; gap: .75rem; align-items: center; padding-block: .85rem; border-top: 1px solid rgba(255,255,255,.14); }
+.row dt { font: 500 .72rem/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--band-muted); }
+.row dd { margin: 0; font-size: 1.1rem; font-weight: 600; min-width: 0; overflow-wrap: anywhere; user-select: all; }
+.row a { color: var(--band-ink); text-underline-offset: 3px; user-select: auto; }
+.copy { font: 600 .8rem/1 var(--f-body); color: var(--band-ink); background: transparent; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; padding: .5rem .7rem; cursor: pointer; min-width: 4.5rem; }
+.copy:hover { border-color: var(--band-accent); }
+.foot { padding-block: 1.5rem 2.5rem; color: var(--muted); font-size: .85rem; }
+
+@media (max-width: 560px) {
+  .slide-head { grid-template-columns: 1fr; gap: .2rem; }
+  .num { flex-direction: row; align-items: baseline; gap: .5rem; }
+  .num-val { font-size: 1rem; }
+  .sources { padding-left: 0; }
+  .src { grid-template-columns: 1fr; gap: .45rem; margin-left: 0; }
+  .row { grid-template-columns: 1fr auto; }
+  .row dt { grid-column: 1 / -1; }
+}
+</style>
+<style>body{margin:0} img{max-width:100%}</style>
+</head>
+<body>
+
+
+<header class="top wrap">
+  <p class="eyebrow"><span>COP17 Green Zone</span><span>Yerevan</span><span>40.18° N, 44.51° E</span></p>
+  <h1>Earth Observation for Biodiversity Conservation and Ecosystem Monitoring</h1>
+  <p class="lede">Every study, report, dataset, image and website behind the talk, grouped by slide. Tap a title to open the original.</p>
+  <dl class="meta">
+    <div><dt>Speakers</dt><dd>Masis Komrokian, Rima Avetisyan</dd></div>
+    <div><dt>Sources</dt><dd>48 across 12 sections</dd></div>
+    <div><dt>Updated</dt><dd>25 October 2026</dd></div>
+  </dl>
+</header>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>Speakers and contact</span></p>
+    <h2 id="contact-h">Contact us</h2>
+    <div class="people">
+      <div class="person">
+        <p class="order">Speaker 1</p>
+        <h3>Masis Komrokian</h3>
+        <p class="role">Chief Technology Officer and Deputy Director, GeoCosmos CJSC</p>
+        <dl class="rows">
+          <div class="row"><dt>Phone</dt><dd id="c-masis">+374 33318990</dd><button class="copy" type="button" data-copy="c-masis">Copy</button></div>
+        </dl>
+      </div>
+      <div class="person">
+        <p class="order">Speaker 2</p>
+        <h3>Rima Avetisyan</h3>
+        <p class="role">Image Processing Specialist, GeoCosmos CJSC; Machine Learning Engineer, GIS and Remote Sensing Department, Center for Ecological-Noosphere Studies</p>
+      </div>
+    </div>
+    <div class="company">
+      <h3>GeoCosmos CJSC</h3>
+      <p class="tagline">We observe from space. Satellite imagery, processing and geospatial analysis from Armenia.</p>
+      <dl class="rows">
+        <div class="row"><dt>Website</dt><dd><a href="https://geocosmos.am" target="_blank" rel="noopener">geocosmos.am</a></dd><span></span></div>
+        <div class="row"><dt>Email</dt><dd id="c-email">info@geocosmos.am</dd><button class="copy" type="button" data-copy="c-email">Copy</button></div>
+        <div class="row"><dt>Phone</dt><dd id="c-phone">+374 12 588 222</dd><button class="copy" type="button" data-copy="c-phone">Copy</button></div>
+        <div class="row"><dt>Address</dt><dd id="c-addr">3 Hakob Hakobyan St., Yerevan, Armenia</dd><button class="copy" type="button" data-copy="c-addr">Copy</button></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<nav class="index" aria-label="Jump to slide">
+  <div class="wrap"><span class="index-label">Jump to</span><div class="chips"><a class="chip chip-contact" href="#contact">Contact</a><a class="chip" href="#intro">1–7</a><a class="chip" href="#s09">9</a><a class="chip" href="#s10">10</a><a class="chip" href="#s11">11</a><a class="chip" href="#s12">12</a><a class="chip" href="#s13">13</a><a class="chip" href="#s14">14</a><a class="chip" href="#s15">15</a><a class="chip" href="#s16">16</a><a class="chip" href="#s17">17</a><a class="chip" href="#s18">18</a><a class="chip" href="#s19">19</a></div></div>
+</nav>
+
+<main class="wrap">
+<p class="eyebrow cite-eyebrow"><span>Citations by slide</span></p>
+<section class="slide" id="intro" aria-labelledby="intro-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slides</span><span class="num-val">1–7</span></p>
+    <h2 id="intro-h">Introduction, COP17 and GeoCosmos</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.cbd.int/doc/press/2026/pr-2026-10-19-cop17-en.pdf" target="_blank" rel="noopener">As Global Promises for Nature Reach Halftime Checkpoint, UN Biodiversity Conference Opens in Armenia<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">CBD Secretariat press release, 19 October 2026</p>
+    <p class="use">COP17 dates (19–30 October 2026, Yerevan) and the first global review of progress.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-doc">Policy</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.cbd.int/gbf/targets" target="_blank" rel="noopener">Kunming–Montreal Global Biodiversity Framework: 2030 targets<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Convention on Biological Diversity</p>
+    <p class="use">The 23 global targets for 2030.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://geocosmos.am" target="_blank" rel="noopener">ArmSat-1 imagery: Yerevan, Hatis, Gyumri, Lake Sevan, Kapan and the Moon<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">© GeoCosmos CJSC</p>
+    <p class="use">Slides 1, 3, 4, 7, 16 and 21.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s09" aria-labelledby="s09-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">09</span></p>
+    <h2 id="s09-h">Deforestation Detection</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.fao.org/newsroom/detail/global-deforestation-slows--but-forests-remain-under-pressure--fao-report-shows/en" target="_blank" rel="noopener">Global deforestation slows, but forests remain under pressure, FAO report shows<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">FAO, 21 October 2025 (Global Forest Resources Assessment 2025)</p>
+    <p class="use">Forests cover 4.14 billion hectares, about 32% of the world’s land.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Method</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.fao.org/forest-resources-assessment/remote-sensing-survey/methodology/en" target="_blank" rel="noopener">FRA Remote Sensing Survey: methodology<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">FAO Global Forest Resources Assessment</p>
+    <p class="use">How FAO uses photo-interpretation of high-resolution satellite imagery.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.wri.org/news/release-global-forest-loss-shatters-records-2024-fueled-massive-fires" target="_blank" rel="noopener">Global Forest Loss Shatters Records in 2024, Fueled by Massive Fires<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">World Resources Institute, May 2025 (University of Maryland data)</p>
+    <p class="use">6.7 million ha of tropical primary forest lost in 2024, about 18 football fields per minute, 80% more than 2023; fire the leading cause.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://globalnaturewatch.org/blog/data-and-tools/integrated-deforestation-alerts/" target="_blank" rel="noopener">Integrated deforestation alerts<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Global Forest Watch / Global Nature Watch (World Resources Institute), updated January 2026</p>
+    <p class="use">Optical alerts (University of Maryland) and radar alerts (Wageningen University) combined; highest confidence when systems agree.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.wur.nl/en/research/products-services/radd-forest-disturbance-alert" target="_blank" rel="noopener">RADD forest disturbance alert<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Wageningen University &amp; Research</p>
+    <p class="use">Radar-based alerts that work through persistent cloud cover.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.climatepolicyinitiative.org/wp-content/uploads/2013/05/DETERring-Deforestation-in-the-Brazilian-Amazon-Environmental-Monitoring-and-Law-Enforcement-Executive-Summary.pdf" target="_blank" rel="noopener">DETERring Deforestation in the Brazilian Amazon: Environmental Monitoring and Law Enforcement<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Assunção, Gandour &amp; Rocha, Climate Policy Initiative / PUC-Rio (executive summary)</p>
+    <p class="use">INPE’s DETER alerts guide IBAMA’s field enforcement in the Amazon.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Method</span>
+  <div class="src-body">
+    <a class="src-title" href="https://alerta.mapbiomas.org/en/method" target="_blank" rel="noopener">MapBiomas Alerta: validation method<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">MapBiomas (Brazil)</p>
+    <p class="use">Every alert checked on commercial high-resolution imagery, with a before-and-after report per clearing.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://science.nasa.gov/earth/earth-observatory/faster-detection-of-forest-loss/" target="_blank" rel="noopener">Faster Detection of Forest Loss<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">NASA Earth Observatory, April 2026; model data from Flores-Anderson et al. (2025), International Journal of Applied Earth Observation and Geoinformation</p>
+    <p class="use">Amazon images of 19 January and 8 May 2020; radar flagged the clearing about three months before optical satellites.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s10" aria-labelledby="s10-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">10</span></p>
+    <h2 id="s10-h">Habitat Fragmentation &amp; Ecosystem Restoration</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://science.nasa.gov/earth/earth-observatory/world-of-change/athabasca-oil-sands/" target="_blank" rel="noopener">World of Change: Athabasca Oil Sands<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">NASA Earth Observatory</p>
+    <p class="use">The 2000 and 2007 images of forest divided by industrial development (Alberta, Canada).</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Method</span>
+  <div class="src-body">
+    <a class="src-title" href="https://forest.jrc.ec.europa.eu/en/activities/lpa/mspa/" target="_blank" rel="noopener">Morphological Spatial Pattern Analysis (MSPA)<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">European Commission Joint Research Centre (after Vogt et al., 2007)</p>
+    <p class="use">Classifying landscapes into core habitat, edges, corridors and isolated patches.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Website</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.fao.org/ecosystem-restoration-monitoring/about/un-decade/en" target="_blank" rel="noopener">Framework for Ecosystem Restoration Monitoring (FERM)<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">FAO, UN Decade on Ecosystem Restoration 2021–2030</p>
+    <p class="use">The one-billion-hectare restoration goal and satellite tracking of restoration.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s11" aria-labelledby="s11-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">11</span></p>
+    <h2 id="s11-h">Inland Water Ecosystem Monitoring</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://global-surface-water.appspot.com/" target="_blank" rel="noopener">Global Surface Water Explorer<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">European Commission Joint Research Centre</p>
+    <p class="use">Where surface water has been present over four decades, since the 1980s.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.ramsar.org/news/satellite-based-wetlands-observation-service-as-a-tool-for-wetlands-monitoring-for-sdgs" target="_blank" rel="noopener">Satellite-based Wetlands Observation Service as a tool for wetlands monitoring for SDGs<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Ramsar Convention on Wetlands</p>
+    <p class="use">Satellite data for SDG indicator 6.6.1 and Ramsar reporting.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://science.nasa.gov/earth/earth-observatory/" target="_blank" rel="noopener">Algal bloom on Lake Erie; Yukon River delta wetlands, Alaska<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">NASA Earth Observatory</p>
+    <p class="use">The two example images on the slide.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s12" aria-labelledby="s12-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">12</span></p>
+    <h2 id="s12-h">Lake Urmia: Collapse and Partial Recovery</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.tehrantimes.com/news/525716/Lake-Urmia-s-level-increases-by-120cm-in-7-months" target="_blank" rel="noopener">Lake Urmia’s level increases by 120cm in 7 months<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Tehran Times, 2026</p>
+    <p class="use">Historic area of 5,000–6,000 km²; level up 1.2 m since September 2025, still 3.4 m below its ecological target.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://science.nasa.gov/earth/earth-observatory/lake-urmia-shrivels-again-151913" target="_blank" rel="noopener">Lake Urmia Shrivels Again<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">NASA Earth Observatory (images from 2020 and 2023)</p>
+    <p class="use">Satellite record of the lake’s recent drying.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Website</span>
+  <div class="src-body">
+    <a class="src-title" href="https://en.wikipedia.org/wiki/Lake_Urmia" target="_blank" rel="noopener">Lake Urmia<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Wikipedia overview, with links to the primary studies</p>
+    <p class="use">Satellite estimates of about 88% area loss between 2006 and 2015.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Initiative</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.undp.org/iran/news/government-japan-undp-partnership-lake-urmia-restoration-enters-7th-phase" target="_blank" rel="noopener">Government of Japan–UNDP partnership on Lake Urmia restoration<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">UNDP Iran</p>
+    <p class="use">The restoration programme behind the dam releases.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s13" aria-labelledby="s13-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">13</span></p>
+    <h2 id="s13-h">Land Degradation Monitoring</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-doc">Report</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.unccd.int/news-stories/press-releases/chronic-land-degradation-un-offers-stark-warnings-and-practical" target="_blank" rel="noopener">Global Land Outlook, 2nd edition (2022)<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">UN Convention to Combat Desertification</p>
+    <p class="use">Up to 40% of the world’s land is degraded.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Method</span>
+  <div class="src-body">
+    <a class="src-title" href="http://docs.trends.earth/en/latest/for_users/features/unccdreporting.html" target="_blank" rel="noopener">Land degradation and SDG 15.3.1<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Trends.Earth documentation</p>
+    <p class="use">Land cover change, land productivity and soil organic carbon.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://science.nasa.gov/earth/earth-observatory/" target="_blank" rel="noopener">Forest cleared for farmland and pasture, 2000 and 2021<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">NASA Earth Observatory</p>
+    <p class="use">The comparison image on the slide.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s14" aria-labelledby="s14-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">14</span></p>
+    <h2 id="s14-h">Protected Areas and the 30x30 Target</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-doc">Report</span>
+  <div class="src-body">
+    <a class="src-title" href="https://digitalreport.protectedplanet.net/" target="_blank" rel="noopener">Protected Planet Report 2024<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">UNEP-WCMC and IUCN</p>
+    <p class="use">Coverage of 17.6% on land and 8.4% at sea.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-doc">Policy</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.cbd.int/gbf/targets" target="_blank" rel="noopener">Target 3: conserve 30% of land, waters and seas<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Kunming–Montreal Global Biodiversity Framework</p>
+    <p class="use">The 30 by 30 target.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://doi.org/10.1038/s41558-020-00956-w" target="_blank" rel="noopener">The impact of near-real-time deforestation alerts across the tropics<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Moffette et al., Nature Climate Change (2021)</p>
+    <p class="use">Deforestation about 18% lower in Africa where forest alerts were used.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.protectedplanet.net/" target="_blank" rel="noopener">Protected Planet<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">UNEP-WCMC and IUCN</p>
+    <p class="use">Global database of protected and conserved areas.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://dopa.jrc.ec.europa.eu/" target="_blank" rel="noopener">Digital Observatory for Protected Areas (DOPA)<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">European Commission Joint Research Centre</p>
+    <p class="use">Indicators on the state of and pressures on protected areas.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-img">Image</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.satimagingcorp.com/" target="_blank" rel="noopener">Road through a protected landscape<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">© Satellite Imaging Corporation</p>
+    <p class="use">The image on the slide.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s15" aria-labelledby="s15-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">15</span></p>
+    <h2 id="s15-h">Ecological Corridors &amp; Connectivity Planning</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-doc">Report</span>
+  <div class="src-body">
+    <a class="src-title" href="https://iucn.org/news/protected-areas/202007/pioneering-efforts-come-fruition-global-guidelines-connectivity-conservation-released" target="_blank" rel="noopener">Guidelines for Conserving Connectivity through Ecological Networks and Corridors<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">IUCN World Commission on Protected Areas, 2020</p>
+    <p class="use">Global guidance on ecological corridors.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Tool</span>
+  <div class="src-body">
+    <a class="src-title" href="https://circuitscape.org/" target="_blank" rel="noopener">Circuitscape<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Open-source connectivity modelling</p>
+    <p class="use">Circuit-theory corridor modelling.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Tool</span>
+  <div class="src-body">
+    <a class="src-title" href="https://wildlandsnetwork.org/stories/mapping-the-continent/" target="_blank" rel="noopener">Mapping the Continent: GIS Connectivity Modeling<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Wildlands Network (Linkage Mapper)</p>
+    <p class="use">Least-cost corridors, pinch points and barriers.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Initiative</span>
+  <div class="src-body">
+    <a class="src-title" href="https://y2y.net/" target="_blank" rel="noopener">Yellowstone to Yukon Conservation Initiative<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Y2Y</p>
+    <p class="use">A continental-scale wildlife corridor in North America.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Initiative</span>
+  <div class="src-body">
+    <a class="src-title" href="https://largelandscapes.org/news/room-to-roam/" target="_blank" rel="noopener">Room to Roam: Connecting Data and People to Protect Wildlife Migrations<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Center for Large Landscape Conservation</p>
+    <p class="use">Combining satellite data with animal-tracking data in the Y2Y region.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s16" aria-labelledby="s16-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">16</span></p>
+    <h2 id="s16-h">Armenia: Lake Sevan Ecosystem Monitoring</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://doi.org/10.3390/rs16193734" target="_blank" rel="noopener">Satellite-Based Detection of Algal Blooms in Large Alpine Lake Sevan: Can Satellite Data Overcome the Unavoidable Limitations in Field Observations?<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Asmaryan et al., Remote Sensing 16 (2024) 3734 · co-authored by the speaker</p>
+    <p class="use">Satellite data detect blooms on Lake Sevan reliably, day by day.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://onlinelibrary.wiley.com/doi/full/10.1002/iroh.202002060" target="_blank" rel="noopener">First report about toxic cyanobacterial bloom occurrence in Lake Sevan, Armenia<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Gevorgyan et al., International Review of Hydrobiology (2020)</p>
+    <p class="use">The first confirmation of toxic cyanobacterial blooms in the lake.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://link.springer.com/article/10.1007/s10750-010-0466-6" target="_blank" rel="noopener">High-resolution satellite remote sensing of littoral vegetation of Lake Sevan (Armenia) as a basis for monitoring and assessment<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Heblinski et al., Hydrobiologia 661 (2011) 97–111</p>
+    <p class="use">High-resolution mapping of littoral vegetation.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.researchgate.net/publication/321458605_Reviewing_Lake_Sevan&#x27;s_surface_area_using_remote_sensing_GIS_techniques" target="_blank" rel="noopener">Reviewing Lake Sevan’s surface area using remote sensing and GIS techniques<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">ResearchGate</p>
+    <p class="use">Shoreline and water-level change from satellite time series.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">News</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.ecolur.org/en/news/sevan/11259/" target="_blank" rel="noopener">Blooming in Lake Sevan Has Unprecedented Scales: Satellite Images<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">EcoLur, 3 July 2019</p>
+    <p class="use">The summer 2019 bloom shown in the 26 June and 1 July 2019 images.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s17" aria-labelledby="s17-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">17</span></p>
+    <h2 id="s17-h">Armenia: Forests and Protected Landscapes</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-study">Study</span>
+  <div class="src-body">
+    <a class="src-title" href="https://doi.org/10.3390/rs13152942" target="_blank" rel="noopener">Development and Application of Earth Observation Based Machine Learning Methods for Characterizing Forest and Land Cover Change in Dilijan National Park of Armenia between 1991 and 2019<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Remote Sensing 13 (2021) 2942</p>
+    <p class="use">Forest change in Dilijan National Park; also the source of the forest-type map on the slide.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Initiative</span>
+  <div class="src-body">
+    <a class="src-title" href="https://eo4society.esa.int/projects/eo-clinic-0004-dilijan-forest-armenia/" target="_blank" rel="noopener">EO Clinic: Characterisation of Dilijan National Park Forest Ecosystems, Armenia<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">European Space Agency, for UNDP Armenia</p>
+    <p class="use">The project commissioned by UNDP Armenia.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Website</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.caucasus-naturefund.org/ecoregion/caucasus-hotspot/" target="_blank" rel="noopener">Caucasus biodiversity hotspot<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Caucasus Nature Fund</p>
+    <p class="use">The Caucasus as one of the world’s biodiversity hotspots.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Initiative</span>
+  <div class="src-body">
+    <a class="src-title" href="https://support.wwf.am/en/causes/leopard/" target="_blank" rel="noopener">Adopt a Leopard<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">WWF Armenia, Caucasian leopard conservation</p>
+    <p class="use">The leopard in Khosrov Forest State Reserve and camera-trap monitoring.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s18" aria-labelledby="s18-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">18</span></p>
+    <h2 id="s18-h">From Observations to Measurable Indicators</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">Global Forest Watch: tree cover loss<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">World Resources Institute and University of Maryland</p>
+    <p class="use">The global tree-cover loss map on the slide.</p>
+  </div>
+</li><li class="src">
+  <span class="kind ">Data</span>
+  <div class="src-body">
+    <a class="src-title" href="https://globalnaturewatch.org/blog/data-and-tools/2024-tree-cover-loss-data-explained/" target="_blank" rel="noopener">Global Forest Watch’s 2024 Tree Cover Loss Data Explained<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Global Forest Watch</p>
+    <p class="use">How the loss data are measured consistently across countries and years.</p>
+  </div>
+</li>
+  </ul>
+</section><section class="slide" id="s19" aria-labelledby="s19-h">
+  <div class="slide-head">
+    <p class="num"><span class="num-label">Slide</span><span class="num-val">19</span></p>
+    <h2 id="s19-h">Supporting the Global Biodiversity Framework</h2>
+  </div>
+  <ul class="sources">
+<li class="src">
+  <span class="kind k-doc">Policy</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.cbd.int/article/cop15-final-text-kunming-montreal-gbf-221222" target="_blank" rel="noopener">COP15: Final text of Kunming-Montreal Global Biodiversity Framework<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">CBD COP15, adopted 19 December 2022</p>
+    <p class="use">Targets 1, 2, 3, 10, 12 and 21.</p>
+  </div>
+</li><li class="src">
+  <span class="kind k-doc">Policy</span>
+  <div class="src-body">
+    <a class="src-title" href="https://www.cbd.int/gbf/targets" target="_blank" rel="noopener">2030 Targets (with guidance notes)<span class="ext" aria-hidden="true">↗</span></a>
+    <p class="by">Convention on Biological Diversity</p>
+    <p class="use">Full wording of each target.</p>
+  </div>
+</li>
+  </ul>
+</section>
+</main>
+
+<footer class="foot wrap">
+  <p>Images shown in the talk remain the property of their owners and are credited above. ArmSat-1 imagery © GeoCosmos CJSC.</p>
+</footer>
+
+<script>
+(function () {
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.dataset.copy);
+      var text = el.textContent.trim();
+      var done = function (msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      var select = function () { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); };
+      try { navigator.clipboard.writeText(text).then(function () { done('Copied'); }, select); } catch (err) { select(); }
+    });
+  });
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var byId = {};
+  chips.forEach(function (c) { byId[c.getAttribute('href').slice(1)] = c; });
+  if (!('IntersectionObserver' in window)) return;
+  var current = null;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      var c = byId[en.target.id];
+      if (!c || c === current) return;
+      if (current) current.removeAttribute('aria-current');
+      c.setAttribute('aria-current', 'true'); current = c;
+      var bar = c.parentNode;
+      bar.scrollTo({ left: c.offsetLeft - bar.clientWidth / 2 + c.clientWidth / 2, behavior: 'smooth' });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('.slide, .contact').forEach(function (s) { io.observe(s); });
+})();
+</script>
+
+</body>
+</html>
